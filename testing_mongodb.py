@@ -2,8 +2,8 @@ from pymongo import MongoClient
 from datetime import datetime
 from datetime import datetime, timedelta
 
-# 用戶提供的 MongoDB URI
-MONGO_URI = "mongodb+srv://bing:eTRUKG4ihehqVX5Y@webnews.d8cuzzn.mongodb.net/?retryWrites=true&w=majority&appName=webNews"
+# MongoDB URI
+MONGO_URI = ""
 DB_NAME = "webNews"
 COLLECTION_NAME = "webNews"
 
@@ -24,11 +24,9 @@ def test_connection():
         result = collection.insert_one(test_doc)
         print("✅ 成功插入測試資料，ID:", result.inserted_id)
 
-        # 驗證寫入資料
         fetched = collection.find_one({"_id": result.inserted_id})
         print("🔎 成功讀取資料:", fetched)
 
-        # 清除測試資料（可選）
         collection.delete_one({"_id": result.inserted_id})
         print("🧹 測試資料已刪除")
 

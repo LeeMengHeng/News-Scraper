@@ -1,7 +1,7 @@
 # utils.py
 from pymongo import MongoClient
 
-MONGO_URI = "mongodb+srv://bing:eTRUKG4ihehqVX5Y@webnews.d8cuzzn.mongodb.net/?retryWrites=true&w=majority&appName=webNews"
+MONGO_URI = ""
 DB_NAME = "webNews"
 COLLECTION_NAME = "webNews"
 
